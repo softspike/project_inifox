@@ -65,3 +65,48 @@ signIn(userNamePrompt, passwordPrompt);
 
 //////////////////////////////////////////////////////////////
 
+// list functions start //////////////////////////////////////
+var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
+
+
+
+
+function createListElement () {
+	//click creates a new <li> element
+	var li = document.createElement("li")
+	// append the last li element and to display - must have a value
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	// placeholder - after entering the value = empty string
+	input.value = "";
+}
+
+
+function inputLength() {
+	//length - a number of characters a string has
+	return input.value.length;
+}
+
+button.addEventListener("click", function(){
+	//if input value > 0 add to the list
+	if (inputLength() > 0) {
+		createListElement();
+			
+	}
+})
+
+//press enter
+input.addEventListener("keypress", function(event){
+	//if input value > 0 add to the list 
+	if (inputLength() > 0 && event.keyCode === 13) {
+		createListElement();
+	}
+})
+
+// list functions end ///////////////////////////////////////
+
+
+
+

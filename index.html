@@ -5,6 +5,9 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+
+
+
   <nav class="zone blue sticky">
 	<ul class="main-nav">
 		<li><a href="">About</a></li>
@@ -12,6 +15,30 @@
 		<li><a href="">Our Team</a></li>
 		<li class="push"><a href="">Contacts</a></li>
 	</ul>
+
+<!---css DOM MANIPULATION---------------------->
+<h1 id="id1">My Heading 1</h1>
+
+
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+
+<p id="p1">
+This is a text.
+This is a text.
+This is a text.
+This is a text.
+</p>
+
+<input type="button" value="Hide text" onclick="document.getElementById('p1').style.visibility='hidden'">
+<input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'">
+<!------------------------->
+
+
+
+
   </nav>
   <div class="container"><img class="cover" src="./img/undraw.png" alt=""></div>
 
@@ -26,10 +53,35 @@
     <div class="box zone"><img src="./img/server_safe_2.png"></div>
   </div>
 
+
+<!--list start----------------------->
+
+<h1>Shopping List</h1>
+  <p id="first">Get it done today</p>
+  <p class="second">No excuses</p>
+  <input id="userinput" type="text" placeholder="enter items">
+  <button id="enter">Enter</button>
+  <ul>
+    <li class="bold red" random="23">Notebook</li>
+    <li>Jello</li>
+    <li>Spinach</li>
+    <li>Rices</li>
+    <li>Birthday cake</li>
+    <li>Candles</li>
+  </ul>
+
+
+<!--list end----------------------->
+  
+
   <footer class="zone yellow">Footer</footer>
 
+
+
+
+
   <script type="text/javascript" src="fb.js">
-    
+  
   </script>
 </body>
 </html>
